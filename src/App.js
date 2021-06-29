@@ -1,5 +1,6 @@
 import { Header, Footer } from "./components"
 import { Layout, RouterWindow} from "./App.styles";
+import GlobalStyle from "./GlobalStyle";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         Routing stuff here
       </RouterWindow>
       <Footer />
+      <GlobalStyle />
     </Layout>
   );
 }

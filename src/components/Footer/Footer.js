@@ -1,3 +1,4 @@
 import { Container } from "./Footer.styles";
-const Footer = () => (<Container>&copy; Series Pro</Container>);
+const year = new Date().getFullYear();
+const Footer = () => (<Container>&copy; {year} Series Pro</Container>);
 export default Footer;

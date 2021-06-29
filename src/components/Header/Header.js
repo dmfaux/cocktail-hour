@@ -1,11 +1,11 @@
 import React from 'react'
-import { Container, Logo } from './Header.styles'
+import { Container, Logo, Brand } from './Header.styles'
 
 const Header = () => (
     <Container>
-        <Logo>
-            Logo
-        </Logo>
+        <Brand>
+            <Logo /> Series Pro
+        </Brand>
     </Container>
 )
 
