@@ -1,12 +1,13 @@
-import React from 'react'
-import { Container, Logo, Brand } from './Header.styles'
+import { Brand, Container, Logo } from "./Header.styles";
+
+import React from "react";
 
 const Header = () => (
-    <Container>
-        <Brand>
-            <Logo /> Series Pro
-        </Brand>
-    </Container>
-)
+  <Container>
+    <Brand>
+      <Logo /> Cocktail Hour
+    </Brand>
+  </Container>
+);
 
-export default Header
+export default Header;

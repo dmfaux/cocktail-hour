@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     * {
-        font-family: Roboto, sans-serif;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         font-size: 1rem;
     }
 
@@ -16,6 +16,7 @@ export default createGlobalStyle`
         --highlightBgText: #fff;
         --massiveFont: 5rem;
         --largeFont: 3rem;
+        --mediumFont: 1.5rem;
         --smallFont: 0.7rem;
     }
 `;

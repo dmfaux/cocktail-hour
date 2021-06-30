@@ -1,14 +1,39 @@
-import { Hero } from "../components";
-import { useState, useEffect } from "react";
+import { Hero, Loader, SearchBar, SearchResults } from "../components";
+import { useEffect, useState } from "react";
+
+import cocktailHero from "../assets/cocktail-hero.jpeg";
+import { searchForCocktails } from "../services/api";
 
 const Home = () => {
-    const image = "https://www.tributemedia.com/hs-fs/hubfs/Images/Blog%20Images/shutterstock_252081805.jpg?width=1240&name=shutterstock_252081805.jpg";
-    return (
-        <>
-            <Hero image={image} title={'SuperOfficeWorker'} text={"Accountant by day, hero by night, nerd 24/7"} />
-            <div>Stuff</div>
-        </>
-    );
+  const [hero, setHero] = useState(cocktailHero);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [cocktails, setCocktails] = useState([]);
+  const [loaded, setLoaded] = useState(true);
+
+  useEffect(() => {
+    const search = async (searchTerm) => {
+      const cocktailResults = await searchForCocktails(searchTerm);
+      setCocktails(cocktailResults.drinks);
+      setLoaded(true);
+    };
+
+    if (searchTerm) {
+      setLoaded(false);
+      search(searchTerm);
+    }
+  }, [searchTerm]);
+
+  return (
+    <>
+      <Hero image={hero} title={null} tag={null} />
+      <SearchBar search={setSearchTerm} />
+      {searchTerm && !loaded ? (
+        <Loader />
+      ) : (
+        <SearchResults cocktails={cocktails} />
+      )}
+    </>
+  );
 };
 
 export default Home;

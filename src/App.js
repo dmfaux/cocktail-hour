@@ -1,7 +1,8 @@
-import { Header, Footer } from "./components"
-import { Layout, RouterWindow} from "./App.styles";
+import { Layout, RouterWindow } from "./App.styles";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+
 import GlobalStyle from "./GlobalStyle";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Header } from "./components";
 import { Home } from "./pages";
 
 const App = () => {
@@ -14,11 +15,10 @@ const App = () => {
             <Route path="/" exact={true} component={Home} />
           </Switch>
         </RouterWindow>
-        <Footer />
         <GlobalStyle />
       </Layout>
     </Router>
   );
-}
+};
 
 export default App;
