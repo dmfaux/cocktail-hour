@@ -7,8 +7,17 @@ export const Container = styled.div`
   padding: 0.5rem;
   background: var(--darkBg);
   color: var(--darkBgText);
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: var(--maxWidth);
+  max-width: var(--maxWidth);
 `;
 
 export const Logo = styled(FaCocktail)`
@@ -23,4 +32,5 @@ export const Brand = styled.div`
   justify-content: flex-start;
   font-size: var(--largeFont);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  cursor: pointer;
 `;

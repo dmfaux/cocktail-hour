@@ -11,8 +11,18 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 500px;
+  height: ${({ isSearching }) => (isSearching ? "200px" : "500px")};
   max-width: 100vw;
+  transition: all 1s ease-in-out;
+  animation: fadeIn 1s;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`

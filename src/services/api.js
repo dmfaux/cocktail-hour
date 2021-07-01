@@ -5,3 +5,8 @@ export const searchForCocktails = async (searchTerm) => {
 
   return await result.json();
 };
+
+export const getCocktailById = async (cocktailId) => {
+  const result = await fetch(`${API_URL}/lookup.php?i=${cocktailId}`);
+  return await result.json();
+};

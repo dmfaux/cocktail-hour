@@ -1,13 +1,10 @@
 import { Container, Content, Wrapper } from "./Hero.styles";
 
-const Hero = ({ image, title, tag }) => {
+const Hero = ({ image, isSearching }) => {
   return (
-    <Container image={image}>
+    <Container image={image} isSearching={isSearching}>
       <Wrapper>
-        <Content>
-          <h1>{title}</h1>
-          <p>{tag}</p>
-        </Content>
+        <Content></Content>
       </Wrapper>
     </Container>
   );
